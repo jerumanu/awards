@@ -18,7 +18,7 @@ class Profile(models.Model):
         self.delete()
     
     def __str__(self):
-        return self.bio
+        return self.user.username
     
     class Meta:
         verbose_name = 'Profile'
@@ -28,8 +28,8 @@ class Projects(models.Model):
     project_image = CloudinaryField('images')
     project_description = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    author_profile = models.ForeignKey(Profile,on_delete=models.CASCADE, blank=True, default='1')
+    author = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    # author_profile = models.ForeignKey(Profile,on_delete=models.CASCADE, blank=True, default='1')
     link = models.URLField()
     country = CountryField(blank_label='(select country)', default='Kenya')
         
