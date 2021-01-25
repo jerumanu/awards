@@ -44,7 +44,7 @@ This is an application that allow user to post a project he/she has created and 
 * CREATE DATABASE instacopy;
 5.Create .env file and paste paste the following filling where appropriate:
 -SECRET_KEY = '<Secret_key>' 
--DBNAME = 'instacopy' -USER = ''
+-DBNAME = 'Awwards' -USER = ''
  -PASSWORD = '' 
  -DEBUG = True
 6.  Run initial Migration 
